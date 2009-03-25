@@ -18,7 +18,7 @@ class Activities(object):
     def from_xml(self, activities_xml):
         root = fromstring(activities_xml)
         activity_nodes = root.findall("activity")
-        self.activities = []
+        self.items = []
         for node in activity_nodes:
             an_activity = activity.Activity()
             an_activity.from_xml_node(node)
